@@ -1,0 +1,33 @@
+# Qt / QMake generated files
+Makefile*
+object_script.*
+*.o
+*.obj
+*.moc
+moc_*.cpp
+ui_*.h
+*.qrc.depends
+*.pro.user
+
+# Build directories (Shadow Builds)
+build-*/
+Release/
+Debug/
+x64/
+
+# Executables & Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Core Engines & Tools (Never upload binaries to Git)
+/tools/yt-dlp.exe
+/tools/ffmpeg.exe
+/tools/ffprobe.exe
+
+# Sensitive & Personal Data
+/cookies/*
+!/cookies/.gitkeep
+*.txt
+*.json

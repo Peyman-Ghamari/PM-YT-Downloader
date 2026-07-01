@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
+        <property name="geometry">
+            <rect><x>0</x><y>0</y><width>980</width><height>660</height></rect>
+        </property>
+        <property name="windowTitle">
+            <string>PM YT.Downloader</string>
+        </property>
+
+        <property name="styleSheet">
+            <string notr="true">
+                /* Overall style and modern system font */
+                * {
+                font-family: "Segoe UI", "Segoe UI Semibold", sans-serif;
+                font-size: 10.5pt;
+                }
+
+                QMainWindow, QWidget {
+                background: #09090e;
+                color: #F1F1F7;
+                }
+
+                /* Sleek main header of the application */
+                #TitleLabel {
+                font-size: 24pt;
+                font-weight: 800;
+                color: #FFFFFF;
+                background: transparent;
+                }
+                #SubtitleLabel {
+                color: #A7A7C4;
+                margin-bottom: 12px;
+                background: transparent;
+                }
+
+                /* Glassmorphism and modern group box design */
+                QGroupBox {
+                border: 1px solid rgba(147, 51, 234, 0.2);
+                border-radius: 16px;
+                margin-top: 14px;
+                padding: 16px;
+                background: rgba(17, 17, 28, 0.6);
+                }
+                QGroupBox::title {
+                subcontrol-origin: margin;
+                left: 16px;
+                padding: 0 10px;
+                color: #C0A5FF;
+                font-weight: 700;
+                }
+
+                QLabel {
+                color: #E2E2EC;
+                background: transparent;
+                }
+
+                /* Modern text fields with neon focus effects */
+                QLineEdit, QComboBox, QPlainTextEdit {
+                background: #0c0c14;
+                border: 1px solid rgba(147, 51, 234, 0.25);
+                border-radius: 10px;
+                padding: 9px 12px;
+                color: #FFFFFF;
+                }
+                QLineEdit:hover, QComboBox:hover, QPlainTextEdit:hover {
+                border: 1px solid rgba(147, 51, 234, 0.45);
+                }
+                QLineEdit:focus, QComboBox:focus, QPlainTextEdit:focus {
+                border: 1px solid #A855F7;
+                background: #0e0e18;
+                }
+
+                /* Advanced dropdown menu styles */
+                QComboBox::drop-down {
+                border: none;
+                width: 30px;
+                }
+                QComboBox QAbstractItemView {
+                background: #11111f;
+                border: 1px solid #9333EA;
+                border-radius: 8px;
+                selection-background-color: #6D28D9;
+                color: #FFFFFF;
+                }
+
+                /* Sleek customized checkboxes */
+                QCheckBox {
+                color: #D1D1E0;
+                spacing: 10px;
+                background: transparent;
+                }
+                QCheckBox::indicator {
+                width: 20px;
+                height: 20px;
+                border-radius: 6px;
+                border: 1px solid rgba(147, 51, 234, 0.4);
+                background: #0c0c14;
+                }
+                QCheckBox::indicator:hover {
+                border: 1px solid #A855F7;
+                }
+                QCheckBox::indicator:checked {
+                background: #A855F7;
+                border: 1px solid #C084FC;
+                }
+
+                /* Glass-style and animated buttons */
+                QPushButton {
+                border-radius: 10px;
+                padding: 9px 16px;
+                font-weight: 700;
+                border: 1px solid rgba(147, 51, 234, 0.3);
+                background: rgba(24, 24, 41, 0.8);
+                color: #FFFFFF;
+                }
+                QPushButton:hover {
+                border: 1px solid #A855F7;
+                background: rgba(35, 35, 59, 0.9);
+                }
+                QPushButton:pressed {
+                background: #1e1e30;
+                }
+                QPushButton:disabled {
+                color: rgba(255,255,255,0.25);
+                border-color: rgba(147,51,234,0.1);
+                background: rgba(15, 15, 25, 0.5);
+                }
+
+                /* Main download button with stunning gradient */
+                #PrimaryButton {
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                stop:0 #7C3AED,
+                stop:1 #C084FC);
+                border: none;
+                color: #FFFFFF;
+                padding: 10px 24px;
+                font-size: 11pt;
+                }
+                #PrimaryButton:hover {
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                stop:0 #6D28D9,
+                stop:1 #A855F7);
+                }
+
+                #SecondaryButton {
+                background: rgba(20, 20, 35, 0.6);
+                }
+
+                /* Emergency stop button */
+                #DangerButton {
+                background: rgba(239, 68, 68, 0.1);
+                border: 1px solid rgba(239, 68, 68, 0.4);
+                color: #EF4444;
+                }
+                #DangerButton:hover {
+                background: #EF4444;
+                color: #FFFFFF;
+                border: none;
+                }
+
+                /* Slim and luxury progress bar */
+                QProgressBar {
+                min-width: 200px;
+                max-width: 260px;
+                border-radius: 7px;
+                border: 1px solid rgba(147, 51, 234, 0.2);
+                background: #0a0a12;
+                height: 14px;
+                text-align: center;
+                color: transparent; /* Hide percentage text for better aesthetics */
+                }
+                QProgressBar::chunk {
+                border-radius: 7px;
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #A855F7, stop:1 #6D28D9);
+                }
+
+                /* Logo physical structure remains unchanged */
+                #LogoPM {
+                background: transparent;
+                border: none;
+                padding: 0px;
+                }
+                #LogoPM:hover { background: transparent; }
+                #LogoPM:pressed { background: transparent; }
+
+                #StatusLabel {
+                color: #A7A7C4;
+                font-weight: 600;
+                background: transparent;
+                }
+            </string>
+        </property>
+
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QVBoxLayout" name="verticalLayoutRoot">
+                <property name="spacing"><number>14</number></property>
+                <property name="leftMargin"><number>18</number></property>
+                <property name="topMargin"><number>18</number></property>
+                <property name="rightMargin"><number>18</number></property>
+                <property name="bottomMargin"><number>18</number></property>
+
+                <item>
+                    <layout class="QVBoxLayout" name="headerLayout">
+                        <property name="spacing"><number>4</number></property>
+                        <item>
+                            <layout class="QHBoxLayout" name="logoRow">
+                                <item><spacer name="spacerLogoLeft"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+                                <item>
+                                    <widget class="QPushButton" name="btnLogoPM">
+                                        <property name="text"><string>PM</string></property>
+                                        <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+                                        <property name="toolTip"><string>About Developer</string></property>
+                                        <property name="minimumSize"><size><width>500</width><height>200</height></size></property>
+                                        <property name="maximumSize"><size><width>500</width><height>200</height></size></property>
+                                        <property name="objectName"><string>LogoPM</string></property>
+                                    </widget>
+                                </item>
+                                <item><spacer name="spacerLogoRight"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+                            </layout>
+                        </item>
+
+                        <item>
+                            <widget class="QLabel" name="TitleLabel">
+                                <property name="text"><string>PM YT.Downloader</string></property>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QLabel" name="SubtitleLabel">
+                                <property name="text"><string>yt-dlp + deno + ffmpeg | Fast, clean, and reliable</string></property>
+                            </widget>
+                        </item>
+                    </layout>
+                </item>
+
+                <item>
+                    <widget class="QGroupBox" name="groupSettings">
+                        <property name="title"><string>Download Settings</string></property>
+                        <layout class="QGridLayout" name="gridSettings">
+                            <property name="spacing"><number>12</number></property>
+
+                            <item row="0" column="0"><widget class="QLabel" name="lblUrl"><property name="text"><string>URL</string></property></widget></item>
+                            <item row="0" column="1" colspan="3"><widget class="QLineEdit" name="urlEdit"><property name="placeholderText"><string>Paste YouTube video / playlist URL...</string></property></widget></item>
+
+                            <item row="1" column="0"><widget class="QLabel" name="lblMode"><property name="text"><string>Mode</string></property></widget></item>
+                            <item row="1" column="1"><widget class="QComboBox" name="modeCombo">
+                                <item><property name="text"><string>Single Video</string></property></item>
+                                <item><property name="text"><string>Playlist</string></property></item>
+                            </widget></item>
+
+                            <item row="1" column="2"><widget class="QLabel" name="lblQuality"><property name="text"><string>Quality (max height)</string></property></widget></item>
+                            <item row="1" column="3"><widget class="QComboBox" name="qualityCombo">
+                                <item><property name="text"><string>360</string></property></item>
+                                <item><property name="text"><string>480</string></property></item>
+                                <item><property name="text"><string>720</string></property></item>
+                                <item><property name="text"><string>1080</string></property></item>
+                            </widget></item>
+
+                            <item row="2" column="0"><widget class="QLabel" name="lblCookies"><property name="text"><string>Cookies</string></property></widget></item>
+                            <item row="2" column="1" colspan="3">
+                                <layout class="QHBoxLayout" name="cookiesRow">
+                                    <property name="spacing"><number>8</number></property>
+                                    <item><widget class="QLineEdit" name="cookiesEdit"><property name="placeholderText"><string>Path to cookies.txt (optional, Auto-Scan Browsers if empty)</string></property></widget></item>
+                                    <item><widget class="QPushButton" name="btnCookies"><property name="text"><string>Browse…</string></property><property name="objectName"><string>SecondaryButton</string></property></widget></item>
+                                </layout>
+                            </item>
+
+                            <item row="3" column="0"><widget class="QLabel" name="lblOutput"><property name="text"><string>Output</string></property></widget></item>
+                            <item row="3" column="1" colspan="3">
+                                <layout class="QHBoxLayout" name="outputRow">
+                                    <property name="spacing"><number>8</number></property>
+                                    <item><widget class="QLineEdit" name="outputEdit"><property name="placeholderText"><string>Output folder, e.g. D:\Videos</string></property></widget></item>
+                                    <item><widget class="QPushButton" name="btnOutput"><property name="text"><string>Browse…</string></property><property name="objectName"><string>SecondaryButton</string></property></widget></item>
+                                </layout>
+                            </item>
+
+                            <item row="4" column="0"><widget class="QLabel" name="lblProxy"><property name="text"><string>Proxy</string></property></widget></item>
+                            <item row="4" column="1" colspan="3">
+                                <layout class="QHBoxLayout" name="proxyRow">
+                                    <property name="spacing"><number>8</number></property>
+                                    <item><widget class="QComboBox" name="proxyTypeCombo">
+                                        <item><property name="text"><string>No Proxy</string></property></item>
+                                        <item><property name="text"><string>SOCKS5</string></property></item>
+                                        <item><property name="text"><string>HTTP</string></property></item>
+                                    </widget></item>
+                                    <item><widget class="QLineEdit" name="proxyAddressEdit"><property name="placeholderText"><string>127.0.0.1</string></property></widget></item>
+                                    <item><widget class="QLineEdit" name="proxyPortEdit"><property name="placeholderText"><string>1080</string></property><property name="maximumWidth"><number>80</number></property></widget></item>
+                                    <item><widget class="QPushButton" name="btnTestProxy"><property name="text"><string>Test Connection</string></property><property name="objectName"><string>SecondaryButton</string></property></widget></item>
+                                    <item><widget class="QPushButton" name="btnUpdateEngine"><property name="text"><string>Update Engine</string></property><property name="objectName"><string>SecondaryButton</string></property><property name="toolTip"><string>Check and update yt-dlp core</string></property></widget></item>
+                                </layout>
+                            </item>
+
+                            <item row="5" column="0" colspan="4">
+                                <layout class="QHBoxLayout" name="optionsRow">
+                                    <item><widget class="QCheckBox" name="ignoreErrorsCheck"><property name="text"><string>Ignore errors (skip private/unavailable videos)</string></property><property name="checked"><bool>true</bool></property></widget></item>
+                                    <item>
+                                        <spacer name="spacerOptions"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer>
+                                    </item>
+                                    <item><widget class="QCheckBox" name="resumeCheck"><property name="text"><string>Resume (continue, no-overwrites)</string></property><property name="checked"><bool>true</bool></property></widget></item>
+                                    <item><widget class="QCheckBox" name="keepTempCheck"><property name="text"><string>Keep temp files (.m4a/.mp4 fragments)</string></property><property name="checked"><bool>false</bool></property></widget></item>
+                                </layout>
+                            </item>
+                        </layout>
+                    </widget>
+                </item>
+
+                <item>
+                    <layout class="QHBoxLayout" name="actionsRow">
+                        <item>
+                            <widget class="QLabel" name="statusLabel">
+                                <property name="objectName"><string>StatusLabel</string></property>
+                                <property name="text"><string>Ready.</string></property>
+                            </widget>
+                        </item>
+                        <item><spacer name="spacerActions"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+
+                        <item>
+                            <layout class="QHBoxLayout" name="statsLayout">
+                                <property name="spacing"><number>16</number></property>
+                                <item><widget class="QLabel" name="lblSpeed"><property name="text"><string>Speed: 0 KB/s</string></property><property name="styleSheet"><string>color: #A855F7; font-weight: bold;</string></property></widget></item>
+                                <item><widget class="QLabel" name="lblSize"><property name="text"><string>Size: 0 MB</string></property><property name="styleSheet"><string>color: #6D28D9;</string></property></widget></item>
+                                <item><widget class="QLabel" name="lblEta"><property name="text"><string>ETA: --:--</string></property><property name="styleSheet"><string>color: #A7A7C4;</string></property></widget></item>
+                            </layout>
+                        </item>
+
+                        <item><widget class="QProgressBar" name="progressBar"><property name="value"><number>0</number></property><property name="textVisible"><bool>false</bool></property></widget></item>
+                        <item><widget class="QPushButton" name="btnStart"><property name="objectName"><string>PrimaryButton</string></property><property name="text"><string>Download</string></property></widget></item>
+                        <item><widget class="QPushButton" name="btnStop"><property name="objectName"><string>DangerButton</string></property><property name="text"><string>Stop</string></property></widget></item>
+                    </layout>
+                </item>
+
+                <item>
+                    <widget class="QGroupBox" name="groupLogs">
+                        <property name="title"><string>Logs</string></property>
+                        <layout class="QVBoxLayout" name="logLayout">
+                            <property name="spacing"><number>0</number></property>
+                            <property name="leftMargin"><number>4</number></property>
+                            <property name="topMargin"><number>4</number></property>
+                            <property name="rightMargin"><number>4</number></property>
+                            <property name="bottomMargin"><number>4</number></property>
+                            <item><widget class="QPlainTextEdit" name="logBox"><property name="readOnly"><bool>true</bool></property><property name="placeholderText"><string>yt-dlp output will appear here…</string></property></widget></item>
+                        </layout>
+                    </widget>
+                </item>
+
+            </layout>
+        </widget>
+
+        <widget class="QMenuBar" name="menubar"/>
+        <widget class="QStatusBar" name="statusbar"/>
+    </widget>
+    <resources/>
+    <connections/>
+</ui>
