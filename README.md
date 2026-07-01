@@ -1,3 +1,6 @@
+![My GIF](assets/Peyman.gif)
+---
+
 # 🌐 PM YT.Downloader
 
 A high-performance, asynchronous YouTube Video and Playlist Downloader built with **C++ (Qt)**, **Deno**, **yt-dlp**, and **FFmpeg**. It features a stunning **dark glassmorphic UI** and seamless **Chrome Extension integration** for an optimized desktop workflow.
