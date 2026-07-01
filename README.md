@@ -16,6 +16,10 @@ A high-performance, asynchronous YouTube Video and Playlist Downloader built wit
   <img src="screenshots/preview.png" alt="PM YT.Downloader Interface" width="850">
 </p>
 
+<p align="center">
+  <img src="screenshots/preview2.png" alt="PM YT.Downloader Interface" width="850">
+</p>
+
 ---
 
 ## ✨ Features
