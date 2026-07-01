@@ -3,7 +3,13 @@
 A high-performance, asynchronous YouTube Video and Playlist Downloader built with **C++ (Qt)**, **Deno**, **yt-dlp**, and **FFmpeg**. It features a stunning **dark glassmorphic UI** and seamless **Chrome Extension integration** for an optimized desktop workflow.
 
 ---
+## 🚀 Quick Download
 
+📥 **[Download PM YT.Downloader Installer v1.0.0 (Windows)](https://github.com/Peyman-Ghamari/PM-YT-Downloader/releases/download/v1.0.0/PM_YT_Downloader_v1.0.0_Setup.exe)**
+
+> *Note: For automatic browser session syncing and bypassing age restrictions, make sure to install the bundled Chrome extension following the guide below.*
+
+---
 ## ✨ Features
 
 * **Glassmorphic UI:** A modern, beautiful dark-mode interface utilizing glassmorphism aesthetics with glowing neon focus states and floating layout elements.
