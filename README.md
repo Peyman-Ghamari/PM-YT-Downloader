@@ -10,6 +10,14 @@ A high-performance, asynchronous YouTube Video and Playlist Downloader built wit
 > *Note: For automatic browser session syncing and bypassing age restrictions, make sure to install the bundled Chrome extension following the guide below.*
 
 ---
+## 📸 Interface Preview
+
+<p align="center">
+  <img src="screenshots/preview.png" alt="PM YT.Downloader Interface" width="850">
+</p>
+
+---
+
 ## ✨ Features
 
 * **Glassmorphic UI:** A modern, beautiful dark-mode interface utilizing glassmorphism aesthetics with glowing neon focus states and floating layout elements.
