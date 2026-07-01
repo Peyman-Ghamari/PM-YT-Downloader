@@ -59,7 +59,7 @@ Based on the clean CMake tree architecture of the project:
 ### Compiling from Source
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/Peyman-Ghamari/PM-YT-Downloader.git](https://github.com/YOUR_USERNAME/PM-YT-Downloader.git)
+   git clone [https://github.com/Peyman-Ghamari/PM-YT-Downloader.git](https://github.com/Peyman-Ghamari/PM-YT-Downloader.git)
    cd PM-YT-Downloader
 
 ---
