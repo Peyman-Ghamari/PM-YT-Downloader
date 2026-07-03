@@ -1,9 +1,14 @@
-# Force GitHub to detect the main repository language as C++
-*.ui linguist-documentation=false
-*.ui linguist-vendored=false
-*.ui linguist-language=C++
+# Treat all HTML, CSS, and JS files as vendored (ignored from language stats)
+*.html linguist-vendored
+*.css linguist-vendored
+*.js linguist-vendored
+*.json linguist-vendored
 
-# Ignore chrome extension files from language statistics
-chrome-extension/* linguist-vendored
-assets/* linguist-vendored
-screenshots/* linguist-vendored
+# Force code generator and UI files to be ignored or treated as C++
+*.ui linguist-vendored
+*.xml linguist-vendored
+
+# Ensure C++ takes absolute priority
+*.cpp linguist-language=C++
+*.h linguist-language=C++
+*.hpp linguist-language=C++
