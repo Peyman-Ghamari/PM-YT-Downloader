@@ -1,0 +1,9 @@
+# Force GitHub to detect the main repository language as C++
+*.ui linguist-documentation=false
+*.ui linguist-vendored=false
+*.ui linguist-language=C++
+
+# Ignore chrome extension files from language statistics
+chrome-extension/* linguist-vendored
+assets/* linguist-vendored
+screenshots/* linguist-vendored
