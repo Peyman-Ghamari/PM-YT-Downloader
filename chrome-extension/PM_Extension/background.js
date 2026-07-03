@@ -9,21 +9,21 @@ chrome.action.onClicked.addListener(async (tab) => {
     
     let cookiesText = "# Netscape HTTP Cookie File\n";
     cookies.forEach(c => {
-      // ۱. تبدیل دقیق ساب‌دومین به TRUE یا FALSE
+      // 1. Precise Conversion Of Subdomain To TRUE Or FALSE
       const includeSubdomains = c.domain.startsWith(".") ? "TRUE" : "FALSE";
       const secure = c.secure ? "TRUE" : "FALSE";
       
-      // ۲. حل مشکل اصلی پایتون: هندل کردن کوکی‌های سشن یا منقضی شده
+      // 2. Solving Python Core Issue: Handling Session Or Expired Cookies
       let expiration = 0;
       if (c.expirationDate && !isNaN(c.expirationDate)) {
         expiration = Math.floor(c.expirationDate);
-        // جلوگیری از اعداد نجومی فراتر از سال ۲۰۳۸ که پایتون را کرش میدهند
+        // Preventing Astronomical Numbers Beyond Year 2038 That Crash Python
         if (expiration > 2147483647) {
           expiration = 2147483647; 
         }
       }
 
-      // ۳. ساخت ساختار کاملاً استاندارد خط با تب
+      // 3. Creating Completely Standard Line Structure With Tabs
       cookiesText += `${c.domain}\t${includeSubdomains}\t${c.path}\t${secure}\t${expiration}\t${c.name}\t${c.value}\n`;
     });
 
