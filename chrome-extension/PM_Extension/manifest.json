@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "PM YT Downloader Helper",
+  "version": "1.1",
+  "description": "Sends YouTube URLs and Cookies directly to PM YT.Downloader",
+  "permissions": [
+    "cookies",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.youtube.com/",
+    "http://*.youtube.com/"
+  ],
+  "action": {
+    "default_title": "Send to PM Downloader",
+    "default_icon": {
+      "16": "pm.png",
+      "48": "pm.png",
+      "128": "pm.png"
+    }
+  },
+  "icons": {
+    "16": "pm.png",
+    "48": "pm.png",
+    "128": "pm.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
